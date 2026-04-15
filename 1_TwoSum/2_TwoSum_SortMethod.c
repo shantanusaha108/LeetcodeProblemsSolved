@@ -4,6 +4,9 @@
 class Solution{
     public:
         std::vector<int> twoSum(std::vector<int> nums , int target){
+            for(size_t i=0; i<nums.size(); i++){
+
+            }
         }
 };
 
