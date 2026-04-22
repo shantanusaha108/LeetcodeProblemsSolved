@@ -40,7 +40,7 @@ class Solution{
 			std::unordered_map<int,int> hashMap;
 			for(size_t i = 0; i<nums.size(); i++){
 				int temp = target - nums[i];
-				if(hashMap.find(temp)){
+				if(hashMap.contains(temp)){
 					return {(int)i,hashMap[temp]};
 				}
 				hashMap[nums[i]]=i;
