@@ -9,12 +9,13 @@ class Solution{
 			std::unordered_map<int,int> hashMap;
 			for(size_t i=0; i<nums.size(); i++){
 				if(hashMap.contains(nums[i])){
-                    if( std::abs(hashMap[nums[i]]- (int)i) <= k){
-                    return true;
-                    }
+					if( std::abs(hashMap[nums[i]]- (int)i) <= k){
+						return true;
+					}
 				}
-                hashMap[nums[i]] = (int)i;
+				hashMap[nums[i]] = (int)i;
 			}
 			return false;
 		}
 };
+
