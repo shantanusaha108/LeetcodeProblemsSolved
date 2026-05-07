@@ -1,3 +1,7 @@
+#include<iostream>
+#include<vector>
+#include <utility>//to use std::swap
+
 class Solution {
 public:
     int firstMissingPositive(std::vector<int>& nums) {
@@ -19,3 +23,8 @@ public:
         return sizeOfInput + 1;
     }
 };
+
+
+int main(){
+    return 0;
+}
