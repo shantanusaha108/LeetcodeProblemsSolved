@@ -17,10 +17,10 @@ class Solution {
 
             if(s1Map == s2Map) return true;
 
-            for(size_t i=0; i<s2.size(); i++){
+            for(size_t i=s1.size(); i<s2.size(); i++){
                 if(s1Map == s2Map) return true;
 
-                
+                s2Map[(int)(s2[i-s1.size()])]--;
             }
             
         }
