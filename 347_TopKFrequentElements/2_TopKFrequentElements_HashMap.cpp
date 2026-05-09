@@ -1,7 +1,7 @@
 class Solution {
 public:
     vector<int> topKFrequent(vector<int>& nums, int k) {
-        unordered_map<int, int> freq;
+        std::unordered_map<int, int> freq;
         
         // Step 1: count frequencies
         for (int num : nums) {
@@ -10,9 +10,9 @@ public:
 
         // Step 2: min heap
         priority_queue<
-            pair<int,int>, 
-            vector<pair<int,int>>, 
-            greater<pair<int,int>>
+            std::pair<int,int>, 
+            std::vector<std::pair<int,int>>, 
+            greater<std::pair<int,int>>
         > pq;
 
         // Step 3: keep only top k
