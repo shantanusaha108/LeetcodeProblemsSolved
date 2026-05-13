@@ -1,3 +1,8 @@
+#include<iostream>
+#include<vector>
+#include<unordered_set>
+
+
 class Solution{
     public:
         int longestConsecutive(std::vector<int>& nums){
@@ -23,3 +28,7 @@ class Solution{
             return longestConsecSize;
         }
 };
+
+int main(){
+    return 0;
+}

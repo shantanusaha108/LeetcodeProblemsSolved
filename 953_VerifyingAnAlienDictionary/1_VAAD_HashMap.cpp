@@ -22,7 +22,7 @@ class Solution{
 					sizeOfShortWord = words[i+1].size();
 				}
 
-				for(size_t j=0; j<sizeOfShortWord; j++){
+				for(size_t j=0; j<sizeOfShortWord; j++){ 
 					if(hashMap[words[i][j]] < hashMap[words[i+1][j]]){
 						letterInW1SmallThanLetterInW2 = true;
 						break;
