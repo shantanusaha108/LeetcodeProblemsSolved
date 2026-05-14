@@ -8,6 +8,8 @@ class Solution{
         int longestConsecutive(std::vector<int>& nums){
             if(nums.size() == 0) return 0;
             if(nums.size() == 1) return 1; 
+
+            
             std::unordered_set<int> hashSet(nums.begin(), nums.end());
 
             int longestConsecSize  = 0;
