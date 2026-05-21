@@ -13,11 +13,11 @@ public:
         int lastDuplicateElement = 0;
         for(size_t i=0 ;i<nums.size(); i++){
             if(i != 0 &&  nums[i]==nums[i-1] ){
-                if(lastDuplicateElement == nums[i]){
-                    continue;
-                }
-                lastDuplicateElement = nums[i];
-                continue;
+                if(lastDuplicateElement == nums[i]){ //dead code
+                    continue;                        //dead code
+                }                                    //dead code
+                lastDuplicateElement = nums[i];      //dead code
+                continue;                                
             }
             KCount++;
             nums[lastDuplicateIndex] = nums[i];

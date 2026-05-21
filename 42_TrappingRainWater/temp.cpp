@@ -6,23 +6,22 @@ class Solution{
             int water = 0;
             int size = static_cast<int>(height.size());
 
-            while(high<size && low<=high){
-                while(height[high] < height[low]) {
+            while(low<size-1 && high<size && low<=high){
+                if(height[high] < height[low]) {
                     high++;
                 }
-                if(height[high] >= height[low] && low != high-1 && low != high){
+                else if(height[high] >= height[low] && low != high-1){
                     int minHeight = std::min(height[high] ,height[low] );
                     low++;
                     while(low<high){
                         water += minHeight - height[low];
                         low++;
                     }
-                    low++;
-                }
+                }//else{
+                //     high++;
+                //     low = high-1;
+                // }
             }
             return water;
         }
 };
-
-
-
