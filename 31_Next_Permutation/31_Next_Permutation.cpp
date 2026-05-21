@@ -3,12 +3,10 @@
 #include<climits>
 #include<algorithm>
 
-
 class Solution {
 public:
     void nextPermutation(std::vector<int>& nums) {
         if(nums.size()==0) return;
-
         int pivot=-1;
 
         //to find the pivot element
@@ -19,6 +17,7 @@ public:
                 break;
             }
         }
+
         //-1 means no pivot found , so we reverse the 
         // entire vector and that will be the answer
         if(pivot == -1){
@@ -29,7 +28,7 @@ public:
         //to find the first element greater than pivot element 
         //and then swapping em
         int minimumIndex = 0;
-        for(int i=(int)nums.size()-1; i>pivot; i++){
+        for(int i=(int)nums.size()-1; i>pivot; i--){
             if(nums[i] > nums[pivot]){
                 minimumIndex = i;
                 break;
@@ -47,12 +46,14 @@ public:
             left++;
             right--;
         }
+
+        
     }
 };
 
 int main(){
     Solution sol;
-    std::vector<int> nums = {3,2,1}; 
+    std::vector<int> nums = {5,1,1}; 
     sol.nextPermutation(nums);
     for(auto elem : nums ){
         std::cout<<elem<<", ";
