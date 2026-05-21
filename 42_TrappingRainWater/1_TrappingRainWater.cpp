@@ -42,7 +42,7 @@ class Solution{
                     high++;
                 }
                 if(height[high] >= height[low] && low != high-1 && low != high){
-                    if(height[high] > height[high+1]){
+                    if(height[high] >= height[high+1]){
                         int minHeight = std::min(height[high] ,height[low] );
                         low++;
                         while(low<high){
@@ -50,7 +50,9 @@ class Solution{
                             low++;
                         }
                         low++;
-                    }
+                    }else{
+			    high++;
+		    }
                 }
                 // else{
                 //     high++;
