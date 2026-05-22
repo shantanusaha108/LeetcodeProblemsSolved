@@ -1,0 +1,1 @@
+int n = mergedArray.size()-1;
