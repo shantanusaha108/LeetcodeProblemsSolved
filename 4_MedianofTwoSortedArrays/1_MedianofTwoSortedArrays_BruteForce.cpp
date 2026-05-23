@@ -9,9 +9,6 @@ void printVector(std::vector<int>& nums){
 }
 
 void mergeVector(std::vector<int>& mergedArray, std::vector<int>& nums1, std::vector<int>& nums2){
-
-
-
     int i = 0;
     int j = 0;
     while(i < nums1.size() && j < nums2.size()){
@@ -38,7 +35,6 @@ void mergeVector(std::vector<int>& mergedArray, std::vector<int>& nums1, std::ve
         mergedArray.push_back(nums2[j]);
         j++;
     }
-    printVector(mergedArray);
 }
 
 class Solution{

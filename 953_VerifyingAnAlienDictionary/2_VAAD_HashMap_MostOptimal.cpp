@@ -1,10 +1,12 @@
 #include<iostream>
 #include<unordered_map>
+#include<string>
+#include<vector>
 
 
 class Solution{
 	public:
-		bool isAlienSorted(std::vector<string>& words, string order){
+		bool isAlienSorted(std::vector<std::string>& words, std::string order){
 			if(words.size() == 0) return true;
 
 			std::vector<int> rank(26,0);
@@ -40,3 +42,8 @@ class Solution{
 			return true;
 		}
 };
+
+
+int main(){
+	return 0;
+}
