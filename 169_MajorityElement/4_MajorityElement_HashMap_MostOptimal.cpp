@@ -21,9 +21,9 @@ public:
             }else{
                 count --;
             }
-            
-            
         }
+        // Boyer-Moore Majority vote algorithm
+
         return reqElement;
     }
 };
