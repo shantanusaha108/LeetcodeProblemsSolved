@@ -37,3 +37,6 @@ int main(){
     std::cout<<"Required Element is : "<<sol.majorityElement(nums)<<std::endl;
     return 0;
 }
+
+
+
