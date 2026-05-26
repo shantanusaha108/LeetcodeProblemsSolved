@@ -9,11 +9,9 @@ public:
     int numberOfSpecialChars(std::string word) {
         if(word.size() == 0) return 0;
 
-        
         std::vector<bool> upperCaseVec(26,false);
         std::vector<bool> lowerCaseVec(26,false);
 
-        
         for(char ch : word){
             if(ch >= 'A' && word[i] <= 'Z'){
                 upperCaseVec[ch - 'A'] = true;
