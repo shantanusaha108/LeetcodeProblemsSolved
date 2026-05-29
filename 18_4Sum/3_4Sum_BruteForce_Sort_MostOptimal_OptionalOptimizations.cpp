@@ -13,7 +13,7 @@ class Solution {
             vector<vector<int>> result;
 
             for (size_t i = 0; i < nums.size() - 3; i++) {
-
+                int n = nums.size();
                 //early prunning
                 if(static_cast<long long>(nums[i]+nums[i+1]+nums[i+2]+nums[i+3]) > target) break;
                 else if(static_cast<long long>(nums[i]+nums[i+1]+nums[i+2]+nums[i+3]) < target) continue;
