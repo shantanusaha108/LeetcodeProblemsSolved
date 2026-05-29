@@ -1,4 +1,29 @@
-//OptionalOptimizations :- adding prunning
+//OptionalOptimizations :- Removing repeated typecasting to static_cast<long,long>
+//its is usually for the purpose of not repeating same code multiple time
+//in modern comilers using moderns cups
+// long long sum =
+//     static_cast<long long>(nums[i]) +
+//     nums[j] +
+//     nums[low] +
+//     nums[high];
+
+// and
+
+// long long first = nums[i];
+
+// long long sum =
+//     first +
+//     nums[j] +
+//     nums[low] +
+//     nums[high];
+//will likely compile to nearly identical machine code under optimization.
+// The main benefit of:
+// long long first = nums[i];
+// is readability and avoiding repeatedly writing:
+// static_cast<long long>(nums[i])
+// not performance.
+
+
 #include<stdio.h>
 #include<vector>
 #include<algorithm>
@@ -6,20 +31,23 @@
 
 class Solution {
     public:
-        std::vector<std::vector<int>> fourSum(std::vector<int>& nums, int target) {
+        vector<vector<int>> fourSum(vector<int>& nums, int target) {
             if (nums.size() < 4) return {};
 
             sort(nums.begin(), nums.end());
-            std::vector<std::vector<int>> result;
+            vector<vector<int>> result;
 
             const int n = nums.size();
             for (int i = 0; i < n - 3; i++) {
                 //duplicate checking to prevent duplicate vector<int> in vector<vector<int>>
                 if (i>0 && nums[i] == nums[i - 1]) continue;
 
+                //to prevent writing same code multiple time
+                long long firstValue =  static_cast<long long>(nums[i]);
+
                 //early prunning
-                if(static_cast<long long>(nums[i]) +nums[i+1]+nums[i+2]+nums[i+3] > target) break;
-                if(static_cast<long long>(nums[i]) +nums[n-1]+nums[n-2]+nums[n-3] < target) continue;
+                if(firstValue+nums[i+1]+nums[i+2]+nums[i+3] > target) break;
+                if(firstValue+nums[n-1]+nums[n-2]+nums[n-3] < target) continue;
                 
                 for (int j = i + 1; j < n - 2; j++) {
 
@@ -27,14 +55,14 @@ class Solution {
                     if (j>i+1 && nums[j] == nums[j - 1]) continue;
 
                     //early prunning
-                    if(static_cast<long long>(nums[i]) +nums[j]+nums[j+1]+nums[j+2] > target) break;
-                    if(static_cast<long long>(nums[i]) +nums[j]+nums[n-1]+nums[n-2] < target) continue;
+                    if(firstValue+nums[j]+nums[j+1]+nums[j+2] > target) break;
+                    if(firstValue+nums[j]+nums[n-1]+nums[n-2] < target) continue;
 
                     int low = j + 1;
                     int high = n - 1;
                     while (low < high) {
                         
-                        long long sum = static_cast<long long>(nums[i]) + nums[j] + nums[low] + nums[high];
+                        long long sum = firstValue+ nums[j] + nums[low] + nums[high];
                         if (sum == target) {
                             result.push_back( {nums[i], nums[j], nums[low], nums[high]} );
                             low++;
