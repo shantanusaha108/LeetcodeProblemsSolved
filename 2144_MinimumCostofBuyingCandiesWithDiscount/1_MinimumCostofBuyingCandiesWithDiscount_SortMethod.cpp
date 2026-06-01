@@ -13,7 +13,6 @@ class Solution {
 public:
     int minimumCost(std::vector<int>& cost) {
         std::sort(cost.begin(),cost.end());
-        printVec(cost);
         int totalCost = 0;
         int high = cost.size()-1;
         while(high >= 0){
