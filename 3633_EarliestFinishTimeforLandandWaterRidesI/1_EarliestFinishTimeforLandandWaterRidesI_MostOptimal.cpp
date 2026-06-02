@@ -1,3 +1,9 @@
+#include<iostream>
+#include<vector>
+#include<climits>
+
+using namespace std;
+
 class Solution {
 public:
     int earliestFinishTime(vector<int>& landStartTime,
@@ -36,3 +42,7 @@ public:
         return ans;
     }
 };
+
+int main(){
+    return 0;
+}
