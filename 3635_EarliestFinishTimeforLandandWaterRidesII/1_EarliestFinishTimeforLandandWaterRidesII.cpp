@@ -2,14 +2,13 @@
 #include<vector>
 #include<climits>
 
-using namespace std;
 
 class Solution {
 public:
-    int earliestFinishTime(vector<int>& landStartTime,
-                           vector<int>& landDuration,
-                           vector<int>& waterStartTime,
-                           vector<int>& waterDuration) {
+    int earliestFinishTime(std::vector<int>& landStartTime,
+                           std::vector<int>& landDuration,
+                           std::vector<int>& waterStartTime,
+                           std::vector<int>& waterDuration) {
         
         int minLandFinish = INT_MAX;
         for (int i = 0; i < landStartTime.size(); i++) {
