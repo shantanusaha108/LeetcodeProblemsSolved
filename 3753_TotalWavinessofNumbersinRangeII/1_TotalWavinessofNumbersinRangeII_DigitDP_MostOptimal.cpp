@@ -1,3 +1,8 @@
+#include<iostream>
+#include<string>
+
+
+
 class Solution {
 public:
     struct Node {
@@ -5,7 +10,7 @@ public:
         long long wav;
     };
 
-    string s;
+    std::string s;
 
     Node memo[20][11][11][3];
     bool vis[20][11][11][3];
@@ -109,3 +114,9 @@ public:
         return solve(num2) - solve(num1 - 1);
     }
 };
+
+
+
+int main(){
+    return 0;
+}
