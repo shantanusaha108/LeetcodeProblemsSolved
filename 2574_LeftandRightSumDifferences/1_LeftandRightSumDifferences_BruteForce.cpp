@@ -1,6 +1,10 @@
+#include<iostream>
+#include<vector>
+#include<algorithm>
+
 class Solution {
 public:
-    vector<int> leftRightDifference(vector<int>& nums) {
+    std::vector<int> leftRightDifference(std::vector<int>& nums) {
         if(nums.size() == 0) return {};
         int numsSize = static_cast<int>(nums.size());
 
@@ -42,3 +46,7 @@ public:
         return answer;
     }
 };
+
+int main(){
+    return 0;
+}
