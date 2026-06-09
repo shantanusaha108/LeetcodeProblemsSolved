@@ -1,6 +1,10 @@
+#include<iostream>
+#include<vector>
+
+
 class Solution {
 public:
-    vector<int> pivotArray(vector<int>& nums, int pivot) {
+    std::vector<int> pivotArray(std::vector<int>& nums, int pivot) {
         std::vector<int> smallerElems;
         std::vector<int> sameElems;
         std::vector<int> largerElems;
@@ -20,3 +24,7 @@ public:
         return result;
     }
 };
+
+int main(){
+    return 0;
+}
