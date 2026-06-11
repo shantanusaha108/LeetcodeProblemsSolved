@@ -16,3 +16,8 @@ class Solution{
             return maxProfit;
         }
 };
+
+
+int main(){
+    return 0;
+}
