@@ -7,14 +7,9 @@
 class Solution {
 public:
     int removeDuplicates(std::vector<int>& nums) {
-        int count=0;
-        int k = 0;
-        for(size_t i=0; i<nums.size(); i++){
-            if(i==0){
-                k++;
-                count++;
-                continue;
-            }
+        int count=1;
+        int k = 1;
+        for(size_t i=1; i<nums.size(); i++){
             if(nums[i] == nums[i-1]){
                 if(count<2){
                     nums[k] = nums[i];
