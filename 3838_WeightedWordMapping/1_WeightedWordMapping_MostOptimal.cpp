@@ -1,3 +1,8 @@
+#include<iostream>
+#include<vector>
+
+
+
 class Solution {
 public:
     std::string mapWordWeights(std::vector<std::string>& words, std::vector<int>& weights) {
@@ -15,3 +20,8 @@ public:
         return result;
     }
 };
+
+
+int main(){
+    return 0;
+}
