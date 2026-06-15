@@ -1,9 +1,5 @@
 #include<iostream>
 
-
-
-
-
 /**
  * Definition for singly-linked list.
  * struct ListNode {
@@ -16,88 +12,32 @@
  */
 class Solution {
 public:
-    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
-        ListNode* head = NULL;
-        ListNode* curr = NULL;
-
-        bool carry = false;
-        while(l1 && l2){
-            ListNode* temp = new ListNode();
-            
-            if(carry){
-                int sum = carry + l1->val + l2->val;
-                if(sum > 9){
-                    carry = true;
-                    temp->val = sum%10;
-                }else{
-                    carry = false;
-                    temp->val = sum;
-                }
-            }else{
-                int sum = l1->val + l2->val;
-                if(sum > 9){
-                    carry = true;
-                    temp->val = sum%10;
-                }else{
-                    carry = false;
-                    temp->val = sum;
-                }
-            }
-
-            
-
-            if(!head){
-                head = temp;
-                curr = temp;
-            }else{
-                curr->next = temp;
-                curr = temp;
-            }
-               
-            l1 = l1->next;
-            l2 = l2->next;
+    ListNode* deleteMiddle(ListNode* head) {
+        if(!head) return head;
+        ListNode* indexCount = head;
+        int index = 0;
+        while(indexCount){
+            ++index;
+            indexCount = indexCount->next;
+        }
+        if(index == 1){
+            head = NULL;
+            return head;
         }
 
-        while(l1){
-            ListNode* temp = new ListNode();
-            if(carry){
-                int sum = carry + l1->val;
-                if(sum > 9){
-                    carry = true;
-                    temp->val = sum%10;
-                }else{
-                    carry = false;
-                    temp->val = sum;
-                }
-            }else temp->val = l1->val;
-            curr->next = temp;
-            curr = temp;
-            l1 = l1->next;
-        }
-        while(l2){
-            ListNode* temp = new ListNode();
-            if(carry){
-                int sum = carry + l2->val;
-                if(sum > 9){
-                    carry = true;
-                    temp->val = sum%10;
-                }else{
-                    carry = false;
-                    temp->val = sum;
-                }
-            }else temp->val = l2->val;
-            curr->next = temp;
-            curr = temp;
-            l2 = l2->next;
+        
+        ListNode* prev = head;
+        ListNode* curr = head->next;
+        int i = 1;
+        while(i < (index/2)){
+            curr = curr->next;
+            prev = prev->next;
+            i++;
         }
 
-        if(carry){
-            ListNode* temp = new ListNode();
-            temp->val = 1;
-            curr->next = temp;
-            curr = temp;
-        }
-        curr->next = NULL;
+        prev->next = curr->next;
+        delete(curr);
+
         return head;
     }
 };
