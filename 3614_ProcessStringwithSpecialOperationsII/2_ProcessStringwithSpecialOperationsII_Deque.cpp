@@ -1,9 +1,13 @@
+#include<iostream>
+#include<string>
+#include<deque>
+
+
+
 class Solution {
 public:
-    char processStr(string s, long long k) {
+    char processStr(std::string s, long long k) {
         std::deque<char> dq;
-
-        std::vector<char> vec;
         bool reverse = false;
         for(size_t i=0; i<s.size(); ++i){
             if(s[i] >= 'a' && s[i] <= 'z'){
@@ -45,3 +49,11 @@ public:
         }else return '.';
     }
 };
+
+int main(){
+    Solution sol;
+    std::string c = "%#bz%xum##i##vzo#pwc*#dkwbh####%uf%s*%cgppqhqa%h#l##o%ij%%cz%iga##e###u%#e####jfwx##%%*x%m*%#";
+    long long k = 6523; //output should be 'z'
+    std::cout<<sol.processStr(c,k)<<std::endl;
+    return 0;
+}
