@@ -1,6 +1,10 @@
+#include<iostream>
+#include<vector>
+#include<algorithm>
+
 class Solution {
 public:
-    int largestAltitude(vector<int>& gain) {
+    int largestAltitude(std::vector<int>& gain) {
         if(gain.size() == 0) return 0;
         int highestAltitude = 0;
         for(size_t i=0; i<gain.size(); ++i){
