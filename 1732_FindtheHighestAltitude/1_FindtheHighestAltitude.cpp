@@ -13,3 +13,7 @@ public:
         return highestAltitude;
     }
 };
+
+int main(){
+    return 0;
+}
