@@ -1,4 +1,5 @@
-
+#include<iostream>
+#include<algorithm>
 
 
 //amar bhava samadhan
@@ -17,3 +18,7 @@ public:
         return count;
     }
 };
+
+int main(){
+    return 0;
+}
