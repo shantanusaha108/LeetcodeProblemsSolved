@@ -1,3 +1,7 @@
+#include<iostream>
+#include<vector>
+#include<string>
+
 class Solution {
 public:
     int maxNumberOfBalloons(string text) {
@@ -10,18 +14,23 @@ public:
         int balloonCount = 0;
         std::string balloon = "balloon";
         while(true){
-            int temp = 0;
+            int tempCount = 0;
             for(auto ch : balloon){
                 if(letterCount[ch - 'a'] > 0){
-                    temp ++;
+                    tempCount ++;
                     letterCount[ch - 'a'] -- ;
                 }else{
                     return balloonCount;
                 }
             }
-            if(temp == 7) balloonCount++;
+            if(tempCount == 7) balloonCount++;
         }
 
         return balloonCount;
     }
 };
+
+
+int main(){
+    return 0;
+}
