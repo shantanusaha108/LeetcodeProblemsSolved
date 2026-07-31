@@ -4,7 +4,7 @@
 #include<string>
 
 
-
+//amar bhava samadhan
 class Solution {
 public:
     int minimumPushes(std::string word) {
