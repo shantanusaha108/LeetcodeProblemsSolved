@@ -15,12 +15,12 @@ public:
         std::unordered_set<int> hashSet;
         int minNums = INT_MAX;
         int maxNums = INT_MIN;
-        for(size_t i=1; i<nums.size(); ++i){
+        for(size_t i=0; i<nums.size(); ++i){
             hashSet.insert(nums[i]);
             if(nums[i] > maxNums) maxNums = nums[i];
             if(nums[i] < minNums) minNums = nums[i];
         }
-        for(size_t i=minNums; i<=maxNums; ++i){
+        for(int i=minNums; i<=maxNums; ++i){
             if(hashSet.contains(i)) continue;
             else result.push_back(i);
         }
