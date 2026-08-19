@@ -9,14 +9,17 @@
 //amar bhava samadhan
 class Solution {
 public:
-    int largestInteger(vector<int>& nums, int k) {
+    int largestInteger(std::vector<int>& nums, int k) {
         int i = 0;
         int j = k-1;
         int result = -1;
-        unordered_map<int,int> hashMap;
+
+        std::unordered_map<int,int> hashMap;
+
         while(j<nums.size()){ 
-            unordered_set<int> hashSet;
-            int temp = i;  
+            std::unordered_set<int> hashSet;
+            int temp = i;
+
             while(temp<=j){
                 if(!hashSet.contains(nums[temp])){
                     hashMap[nums[temp]]++;
@@ -30,10 +33,15 @@ public:
 
         for(const auto elem : nums){
             if(hashMap[elem] == 1){
-                result = std::max(result , elem);
+                if(elem > result) result = elem;
             }
         }
 
         return result;
     }
 };
+
+
+int main(){
+    return 0;
+}
