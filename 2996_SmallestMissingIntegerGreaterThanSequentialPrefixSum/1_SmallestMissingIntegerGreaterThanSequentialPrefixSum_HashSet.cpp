@@ -5,7 +5,7 @@
 
 
 
-//amar bhava samadhan
+
 class Solution {
 public:
     int missingInteger(std::vector<int>& nums) {

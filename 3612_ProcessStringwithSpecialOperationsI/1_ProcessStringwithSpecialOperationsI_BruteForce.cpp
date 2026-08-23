@@ -1,7 +1,7 @@
 #include<iostream>
 
 
-//amar bhava samadhan
+
 class Solution {
 public:
     string processStr(string s) {

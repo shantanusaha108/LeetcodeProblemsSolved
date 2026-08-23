@@ -17,7 +17,7 @@ void printVec(vector<int>& temp){
 }
 
 
-//amar bhava samadhan
+
 class Solution {
 public:
     long long gcdSum(vector<int>& nums) {

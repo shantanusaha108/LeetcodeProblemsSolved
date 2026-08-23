@@ -4,7 +4,7 @@
 #include<numeric>
 
 
-// amar bhava samadhan
+
 class Solution {
 public:
     std::vector<int> gcdValues(std::vector<int>& nums, std::vector<long long>& queries) {

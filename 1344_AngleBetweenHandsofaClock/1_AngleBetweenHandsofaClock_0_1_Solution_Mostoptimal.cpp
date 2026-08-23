@@ -3,7 +3,7 @@
 #include<algorithm>
 #include <cmath>
 
-//amar bhava samadhan
+
 class Solution {
 public:
     double angleClock(int hour, int minutes) {

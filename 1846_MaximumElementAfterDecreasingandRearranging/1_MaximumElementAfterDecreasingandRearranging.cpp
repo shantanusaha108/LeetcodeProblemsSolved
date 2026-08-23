@@ -4,7 +4,7 @@
 #include<cmath>
 
 
-//amar bhava samadhan
+
 class Solution {
 public:
     int maximumElementAfterDecrementingAndRearranging(std::vector<int>& arr) {

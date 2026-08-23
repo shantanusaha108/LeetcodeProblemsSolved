@@ -5,7 +5,7 @@
 
 
 
-//amar bhava samadhan
+
 class Solution {
 public:
     std::vector<int> resultArray(std::vector<int>& nums) {

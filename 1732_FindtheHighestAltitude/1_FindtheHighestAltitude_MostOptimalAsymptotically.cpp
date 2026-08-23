@@ -3,7 +3,7 @@
 #include<algorithm>
 
 
-//amar bhava samadhan
+
 class Solution {
 public:
     int largestAltitude(std::vector<int>& gain) {

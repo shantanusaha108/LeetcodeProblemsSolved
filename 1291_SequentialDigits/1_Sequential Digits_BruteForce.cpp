@@ -2,7 +2,7 @@
 #include<vector>
 
 
-//amar bhava samadhan
+
 class Solution {
 public:
     std::vector<int> sequentialDigits(int low, int high) {

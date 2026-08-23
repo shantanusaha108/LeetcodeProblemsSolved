@@ -2,7 +2,7 @@
 #include<algorithm>
 
 
-//amar bhava samadhan kintu idea by chatgpt
+
 class Solution {
 public:
     int maxIceCream(vector<int>& costs, int coins) {

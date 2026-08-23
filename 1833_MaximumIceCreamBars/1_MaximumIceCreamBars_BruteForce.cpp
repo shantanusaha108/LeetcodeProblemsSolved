@@ -2,7 +2,7 @@
 #include<algorithm>
 
 
-//amar bhava samadhan
+
 class Solution {
 public:
     int maxIceCream(vector<int>& costs, int coins) {

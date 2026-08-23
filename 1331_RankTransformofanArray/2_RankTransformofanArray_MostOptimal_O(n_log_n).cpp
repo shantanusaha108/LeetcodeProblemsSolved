@@ -5,7 +5,7 @@
 
 
 
-//amar bhava samadhan
+
 class Solution {
 public:
     std::vector<int> arrayRankTransform(std::vector<int>& arr) {

@@ -4,7 +4,7 @@
 
 
 
-//amar bhava samadhan
+
 class Solution {
 public:
     int maxProduct(std::vector<int>& nums) {
