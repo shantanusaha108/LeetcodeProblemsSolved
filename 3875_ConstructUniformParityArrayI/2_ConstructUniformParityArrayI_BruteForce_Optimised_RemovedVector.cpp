@@ -16,7 +16,10 @@ public:
             else{
                 int j = 0;
                 while(j<nums1.size()){
-                    if(j==i) continue;
+                    if(j==i){
+                        j++;
+                        continue;
+                    }
                     if((nums1[i]-nums1[j])%2 == 0){
                         evenCheck = true;
                         break;
@@ -34,8 +37,11 @@ public:
             else{
                 int j = 0;
                 while(j<nums1.size()){
-                    if(j==i) continue;
-                    if((nums1[i]-nums1[j])%2 == 1){
+                    if(j==i){
+                        j++;
+                        continue;
+                    }
+                    if(std::abs(nums1[i]-nums1[j])%2 == 1){
                         oddCheck = true;
                         break;
                     }
