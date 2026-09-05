@@ -1,6 +1,11 @@
+#include<iostream>
+#include<vector>
+#include<climits>
+
+
 class Solution {
 public:
-    int firstStableIndex(vector<int>& nums, int k) {
+    int firstStableIndex(std::vector<int>& nums, int k) {
         int maxTillI = INT_MIN;
         int minTillI = INT_MAX;
 
@@ -20,3 +25,7 @@ public:
 
     }
 };
+
+int main(){
+    return 0;
+}
