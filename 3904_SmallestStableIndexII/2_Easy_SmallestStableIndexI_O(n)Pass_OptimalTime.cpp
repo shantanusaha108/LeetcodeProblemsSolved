@@ -2,6 +2,8 @@
 #include<vector>
 #include<climits>
 
+
+//amar bhava samadhan
 class Solution {
 public:
     int firstStableIndex(std::vector<int>& nums, int k) {

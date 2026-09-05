@@ -3,6 +3,15 @@
 #include<climits>
 
 
+
+//error : runtime error: addition of unsigned offset to 0x502000000090
+// overflowed to 0x50200000008c (stl_vector.h)
+// for(size_t i=0;....)
+//     for(int j=num.size(); j>=i; --j)
+//since size_t i can hold lots of more info j gets converted to size_t(unsigned int)
+//in the very first iteration when i=0 , so j gets decremented to 0 and then again
+//that leads to the above error
+
 class Solution {
 public:
     int firstStableIndex(std::vector<int>& nums, int k) {
